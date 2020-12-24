@@ -15,3 +15,6 @@ nrf52832-hal = { features = ["rt"], path = "../../nrf52832-hal" }
 [dependencies.embedded-hal]
 version = "0.2.3"
 features = ["unproven"]
+
+[build]
+target = "thumbv7em-none-eabihf"
