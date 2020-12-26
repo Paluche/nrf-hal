@@ -1,0 +1,48 @@
+[package]
+name = "pwm-demo"
+version = "0.1.0"
+authors = ["Hubert Lefevre <hubelefevre@gmail.com>"]
+edition = "2018"
+publish = false
+
+[dependencies]
+cortex-m = "0.6.2"
+cortex-m-rtic = "0.5.3"
+panic-semihosting = "0.5.3"
+
+# [dependencies.nrf51-hal]
+# path = "../../../nrf51-hal"
+# optional = true
+
+# [dependencies.nrf52810-hal]
+# path = "../../../nrf52810-hal"
+# optional = true
+
+# [dependencies.nrf52811-hal]
+# path = "../../../nrf52811-hal"
+# optional = true
+
+[dependencies.nrf52832-hal]
+path = "../../../nrf52832-hal"
+optional = true
+default-features = false
+features = ["xxAA-package"]
+
+# [dependencies.nrf52840-hal]
+# path = "../../../nrf52840-hal"
+# optional = true
+
+[dependencies.embedded-hal]
+version = "0.2.3"
+features = ["unproven"]
+
+[dependencies.rtt-target]
+version = "0.2.0"
+features = ["cortex-m"]
+
+[features]
+#51 = ["nrf51-hal"]
+#52810 = ["nrf52810-hal"]
+#52811 = ["nrf52811-hal"]
+pca10040 = ["nrf52832-hal"]
+#52840 = ["nrf52840-hal"]
